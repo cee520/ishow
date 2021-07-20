@@ -1,0 +1,15 @@
+[global.database.vsquad]
+url = "mysql://root:123456@127.0.0.1/vsquad"
+[development]
+address = "localhost"
+port = 8000
+limits = { forms = 32768 }
+ 
+[production]
+address = "0.0.0.0"
+port = 8000
+workers = 8 #number of cpus * 2
+keep_alive = 5
+log = "critical"
+# secret_key = "hr0vIuQ57PHpoqtnduLXZ0KBB2GbqCEHpjQbW4fdmkqy4qpMz9Dy1op5YCA7I8HF" 
+limits = { forms = 32768 }
